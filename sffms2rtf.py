@@ -74,7 +74,7 @@ def main():
     if not os.path.exists(latex_path):
         latex_path = latex_path + '.tex'
         if not os.path.exists(latex_path):
-            raise RuntimeError('cannot find source LaTeX file -- %s' % latex)
+            raise RuntimeError('cannot find source LaTeX file -- %s' % latex_path)
     if len(sys.argv) == 2:
         rtf_path = re.sub('\.tex$', '', latex_path) + '.rtf'
     else:
